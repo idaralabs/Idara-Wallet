@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#652DD0" />
+    <meta name="description" content="Hedera ID Wallet - Secure digital identity and credential management with decentralized identity (DID) technology" />
+    <meta name="keywords" content="wallet, DID, decentralized identity, verifiable credentials, hedera, digital identity" />
+    <meta name="author" content="Hedera ID Wallet" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Hedera ID Wallet" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hedera ID Wallet" />
+    <meta property="og:description" content="Secure digital identity and credential management with DID technology" />
+    <meta property="og:image" content="/icons/og-image.png" />
+    <meta property="og:url" content="https://hedera-id-wallet.example.com" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hedera ID Wallet" />
+    <meta name="twitter:description" content="Secure digital identity and credential management with DID technology" />
+    <meta name="twitter:image" content="/icons/og-image.png" />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#652DD0" />
+    <meta name="msapplication-TileColor" content="#652DD0" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect to API endpoint -->
+    <link rel="preconnect" href="https://api.hedera-id-wallet.example.com" />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" />
+    
+    <title>Hedera ID Wallet</title>
+    
+    <!-- Prevent flash of unstyled content -->
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f8fafc;
+      }
+      
+      .app-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f8fafc;
+      }
+      
+      .app-loading-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+        background-color: #652DD0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        html, body {
+          background-color: #0f172a;
+          color: #f8fafc;
+        }
+        
+        .app-loading {
+          background-color: #0f172a;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading state shown before React loads -->
+      <div class="app-loading">
+        <div class="app-loading-logo">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z" fill="white" />
+            <path d="M7 7h2v10H7V7zm4 0h2v10h-2V7zm4 0h2v10h-2V7z" fill="white" />
+          </svg>
+        </div>
+        <p style="color: #64748b; font-size: 16px; font-weight: 500;">Loading Hedera ID Wallet...</p>
+      </div>
+    </div>
+    
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>
+          Hedera ID Wallet requires JavaScript to run. Please enable JavaScript in your browser settings and reload the page.
+        </p>
+      </div>
+    </noscript>
+    
+    <!-- Entry point for the React application -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
